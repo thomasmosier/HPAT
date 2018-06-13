@@ -1,0 +1,378 @@
+Module_set: heat_SDI-mass_step-icmlt_ratio-runoff_bucket-toa_DeWalle-trans_DeWalle-albedo_Pelli-pet_Hammon-timelag_Johnstone-flow_lumped-density_Liston-snlq_percent-sca_max-glacier_static
+Method: calibrate_hybrid
+Data_temporal_res: monthly
+Model_timestep: monthly
+
+Parameter, value
+
+Stage: 1 of 1
+Generation: 1
+kge_Parajka: 0.60702
+watt_per_deg	36.8085
+tmp_melt_offset	3.27456
+sn_hold	0.0886235
+ice_melt_pwr	1.72445
+PET_pwr	-2.04608
+soil_moisture_capacity	1.03433
+drain_rate	0.0305274
+timelag_pwr	-0.423233
+
+Stage: 1 of 1
+Generation: 2
+kge_Parajka: 0.59672
+watt_per_deg	24.2306
+tmp_melt_offset	3.95376
+sn_hold	0.00899988
+ice_melt_pwr	-0.716236
+PET_pwr	-0.442955
+soil_moisture_capacity	0.242425
+drain_rate	0.0246734
+timelag_pwr	-0.552055
+
+Stage: 1 of 1
+Generation: 3
+kge_Parajka: 0.60627
+watt_per_deg	19.6765
+tmp_melt_offset	3.21186
+sn_hold	0.0999478
+ice_melt_pwr	1.92391
+PET_pwr	-2.36482
+soil_moisture_capacity	0.928961
+drain_rate	0.000803504
+timelag_pwr	-0.373986
+
+Stage: 1 of 1
+Generation: 4
+kge_Parajka: 0.6066
+watt_per_deg	36.1188
+tmp_melt_offset	3.42867
+sn_hold	0.0988277
+ice_melt_pwr	1.71794
+PET_pwr	-0.952425
+soil_moisture_capacity	0.00136585
+drain_rate	0.0183899
+timelag_pwr	-1.77294
+
+Stage: 1 of 1
+Generation: 5
+kge_Parajka: 0.60644
+watt_per_deg	30.9459
+tmp_melt_offset	3.35136
+sn_hold	0.092079
+ice_melt_pwr	-0.00708828
+PET_pwr	-1.61194
+soil_moisture_capacity	2.61008
+drain_rate	0.0311882
+timelag_pwr	-0.715562
+
+Stage: 1 of 1
+Generation: 6
+kge_Parajka: 0.58722
+watt_per_deg	51.6957
+tmp_melt_offset	2.84694
+sn_hold	0.0872813
+ice_melt_pwr	1.75201
+PET_pwr	-2.30155
+soil_moisture_capacity	1.5756
+drain_rate	0.0333391
+timelag_pwr	-0.243221
+
+Stage: 1 of 1
+Generation: 7
+kge_Parajka: 0.60593
+watt_per_deg	54.3095
+tmp_melt_offset	3.5054
+sn_hold	0.0999793
+ice_melt_pwr	1.45702
+PET_pwr	-2.81561
+soil_moisture_capacity	2.17873
+drain_rate	0.033919
+timelag_pwr	-0.711471
+
+Stage: 1 of 1
+Generation: 8
+kge_Parajka: 0.60725
+watt_per_deg	54.9286
+tmp_melt_offset	3.58239
+sn_hold	0.0482507
+ice_melt_pwr	-0.22904
+PET_pwr	-1.44123
+soil_moisture_capacity	0.221255
+drain_rate	0.0256289
+timelag_pwr	-2.03818
+
+Stage: 1 of 1
+Generation: 9
+kge_Parajka: 0.60367
+watt_per_deg	59.0719
+tmp_melt_offset	3.5437
+sn_hold	0.0213837
+ice_melt_pwr	-1.86148
+PET_pwr	-0.744381
+soil_moisture_capacity	0.0551782
+drain_rate	0.0161062
+timelag_pwr	0.82919
+
+Stage: 1 of 1
+Generation: 10
+kge_Parajka: 0.592
+watt_per_deg	17.9505
+tmp_melt_offset	2.12451
+sn_hold	0.000146318
+ice_melt_pwr	1.53516
+PET_pwr	-0.978081
+soil_moisture_capacity	1.20482
+drain_rate	0.0323198
+timelag_pwr	-0.887731
+
+Stage: 1 of 1
+Generation: 11
+kge_Parajka: 0.57545
+watt_per_deg	52.5432
+tmp_melt_offset	2.54075
+sn_hold	0.00972813
+ice_melt_pwr	1.63376
+PET_pwr	-2.82492
+soil_moisture_capacity	0.158999
+drain_rate	0.0336113
+timelag_pwr	-0.0983644
+
+Stage: 1 of 1
+Generation: 12
+kge_Parajka: 0.5998
+watt_per_deg	21.6281
+tmp_melt_offset	3.31562
+sn_hold	0.021461
+ice_melt_pwr	1.16416
+PET_pwr	0.273442
+soil_moisture_capacity	0.104586
+drain_rate	0.0267164
+timelag_pwr	0.728971
+
+Stage: 1 of 1
+Generation: 13
+kge_Parajka: 0.60424
+watt_per_deg	23.0966
+tmp_melt_offset	3.06279
+sn_hold	0.0652916
+ice_melt_pwr	-0.474044
+PET_pwr	-1.49991
+soil_moisture_capacity	1.36056
+drain_rate	0.0312435
+timelag_pwr	-0.903066
+
+Stage: 1 of 1
+Generation: 14
+kge_Parajka: 0.59072
+watt_per_deg	10.1529
+tmp_melt_offset	1.72181
+sn_hold	0.0416218
+ice_melt_pwr	0.915054
+PET_pwr	-0.967632
+soil_moisture_capacity	3.80723
+drain_rate	0.0310075
+timelag_pwr	0.82995
+
+Stage: 1 of 1
+Generation: 15
+kge_Parajka: 0.58452
+watt_per_deg	32.69
+tmp_melt_offset	3.6045
+sn_hold	0.00518267
+ice_melt_pwr	1.23441
+PET_pwr	-1.32548
+soil_moisture_capacity	0.914732
+drain_rate	0.0279617
+timelag_pwr	-1.28118
+
+Stage: 1 of 1
+Generation: 16
+kge_Parajka: 0.5983
+watt_per_deg	39.0449
+tmp_melt_offset	3.26948
+sn_hold	0.0766266
+ice_melt_pwr	-0.503298
+PET_pwr	-2.05069
+soil_moisture_capacity	2.58601
+drain_rate	0.00012258
+timelag_pwr	-1.50989
+
+Stage: 1 of 1
+Generation: 17
+kge_Parajka: 0.60715
+watt_per_deg	34.8004
+tmp_melt_offset	3.63981
+sn_hold	0.0636006
+ice_melt_pwr	0.102245
+PET_pwr	-1.70188
+soil_moisture_capacity	0.204683
+drain_rate	0.0248863
+timelag_pwr	-1.92498
+
+Stage: 1 of 1
+Generation: 18
+kge_Parajka: 0.57845
+watt_per_deg	58.2314
+tmp_melt_offset	2.43554
+sn_hold	0.0719666
+ice_melt_pwr	-0.788991
+PET_pwr	-0.704888
+soil_moisture_capacity	0.192114
+drain_rate	0.013102
+timelag_pwr	-1.23399
+
+Stage: 1 of 1
+Generation: 19
+kge_Parajka: 0.61163
+watt_per_deg	29.8962
+tmp_melt_offset	3.79649
+sn_hold	0.0953182
+ice_melt_pwr	0.931693
+PET_pwr	-1.0766
+soil_moisture_capacity	0.160331
+drain_rate	0.0198197
+timelag_pwr	-0.523506
+
+Stage: 1 of 1
+Generation: 20
+kge_Parajka: 0.61163
+watt_per_deg	29.8962
+tmp_melt_offset	3.79649
+sn_hold	0.0953182
+ice_melt_pwr	0.931693
+PET_pwr	-1.0766
+soil_moisture_capacity	0.160331
+drain_rate	0.0198197
+timelag_pwr	-0.523506
+
+Stage: 1 of 1
+Generation: 21
+kge_Parajka: 0.61163
+watt_per_deg	29.8962
+tmp_melt_offset	3.79649
+sn_hold	0.0953182
+ice_melt_pwr	0.931693
+PET_pwr	-1.0766
+soil_moisture_capacity	0.160331
+drain_rate	0.0198197
+timelag_pwr	-0.523506
+
+Stage: 1 of 1
+Generation: 22
+kge_Parajka: 0.61163
+watt_per_deg	29.8962
+tmp_melt_offset	3.79649
+sn_hold	0.0953182
+ice_melt_pwr	0.931693
+PET_pwr	-1.0766
+soil_moisture_capacity	0.160331
+drain_rate	0.0198197
+timelag_pwr	-0.523506
+
+Stage: 1 of 1
+Generation: 23
+kge_Parajka: 0.61163
+watt_per_deg	29.8962
+tmp_melt_offset	3.79649
+sn_hold	0.0953182
+ice_melt_pwr	0.931693
+PET_pwr	-1.0766
+soil_moisture_capacity	0.160331
+drain_rate	0.0198197
+timelag_pwr	-0.523506
+
+Stage: 1 of 1
+Generation: 24
+kge_Parajka: 0.61163
+watt_per_deg	29.8962
+tmp_melt_offset	3.79649
+sn_hold	0.0953182
+ice_melt_pwr	0.931693
+PET_pwr	-1.0766
+soil_moisture_capacity	0.160331
+drain_rate	0.0198197
+timelag_pwr	-0.523506
+
+Stage: 1 of 1
+Generation: 25
+kge_Parajka: 0.61163
+watt_per_deg	29.8962
+tmp_melt_offset	3.79649
+sn_hold	0.0953182
+ice_melt_pwr	0.931693
+PET_pwr	-1.0766
+soil_moisture_capacity	0.160331
+drain_rate	0.0198197
+timelag_pwr	-0.523506
+
+Stage: 1 of 1
+Generation: 26
+kge_Parajka: 0.61163
+watt_per_deg	29.8962
+tmp_melt_offset	3.79649
+sn_hold	0.0953182
+ice_melt_pwr	0.931693
+PET_pwr	-1.0766
+soil_moisture_capacity	0.160331
+drain_rate	0.0198197
+timelag_pwr	-0.523506
+
+Stage: 1 of 1
+Generation: 27
+kge_Parajka: 0.61163
+watt_per_deg	29.8962
+tmp_melt_offset	3.79649
+sn_hold	0.0953182
+ice_melt_pwr	0.931693
+PET_pwr	-1.0766
+soil_moisture_capacity	0.160331
+drain_rate	0.0198197
+timelag_pwr	-0.523506
+
+Stage: 1 of 1
+Generation: 28
+kge_Parajka: 0.61163
+watt_per_deg	29.8962
+tmp_melt_offset	3.79649
+sn_hold	0.0953182
+ice_melt_pwr	0.931693
+PET_pwr	-1.0766
+soil_moisture_capacity	0.160331
+drain_rate	0.0198197
+timelag_pwr	-0.523506
+
+Stage: 1 of 1
+Generation: 29
+kge_Parajka: 0.61163
+watt_per_deg	29.8962
+tmp_melt_offset	3.79649
+sn_hold	0.0953182
+ice_melt_pwr	0.931693
+PET_pwr	-1.0766
+soil_moisture_capacity	0.160331
+drain_rate	0.0198197
+timelag_pwr	-0.523506
+
+Stage: 1 of 1
+Generation: 30
+kge_Parajka: 0.61163
+watt_per_deg	29.8962
+tmp_melt_offset	3.79649
+sn_hold	0.0953182
+ice_melt_pwr	0.931693
+PET_pwr	-1.0766
+soil_moisture_capacity	0.160331
+drain_rate	0.0198197
+timelag_pwr	-0.523506
+
+Stage: 1 of 1
+Generation: 31
+kge_Parajka: 0.61163
+watt_per_deg	29.8962
+tmp_melt_offset	3.79649
+sn_hold	0.0953182
+ice_melt_pwr	0.931693
+PET_pwr	-1.0766
+soil_moisture_capacity	0.160331
+drain_rate	0.0198197
+timelag_pwr	-0.523506
