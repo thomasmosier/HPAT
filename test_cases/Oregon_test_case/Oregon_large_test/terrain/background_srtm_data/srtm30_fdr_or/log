@@ -1,2 +1,0 @@
-20161031 932   0     0     0wb486507 C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_facor1 = SELECTMASK(C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_fdr_or, C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\HPAT_test)
-20161031 936   0     0     0wb486507 C:\Users\wb486507\BOXSYN~1\MOSIER~1\OREGON~1\srtm30_fdr_or.ASC = GRIDASCII ( C:\Users\wb486507\Box Sync\mosier_shared\Oregon_tes

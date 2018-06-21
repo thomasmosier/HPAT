@@ -1,0 +1,35 @@
+All displayed text is being written to '/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/model_runs/default_2000thru2006-heat_TI_Kraaijenbrink-snmass_cc-icmlt_3/processing_log_23-12-19-6-2018.txt'.
+CCHF format observation data loaded from previous model run.
+finished loading cchf gagedata
+Finished ice grid initialization
+The CCHF model is being run in 'parameter' mode.
+[Warning: No attributes labeled 'avalanche' were found.] 
+[> In <a href="matlab: opentoline('/Users/thomas/git_local/shared_subroutines_Matlab/general/find_att.m',41,1)">find_att at 41</a>
+  In <a href="matlab: opentoline('/Users/thomas/git_local/CCHF/subroutines_CCHF_specific/modular_engine/CCHF_modules.m',305,1)">CCHF_modules at 305</a>
+  In <a href="matlab: opentoline('/Users/thomas/git_local/CCHF/subroutines_CCHF_specific/modular_engine/CCHF_engine_v4.m',476,1)">CCHF_engine_v4 at 476</a>
+  In <a href="matlab: opentoline('/Users/thomas/git_local/CCHF/subroutines_CCHF_specific/modular_engine/CCHF_implement.m',410,1)">CCHF_implement at 410</a>
+  In <a href="matlab: opentoline('/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/HPAT_main_v3_Oregon_test_case.m',393,1)">HPAT_main_v3_Oregon_test_case at 393</a>] 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CCHF_modules', '/Users/thomas/git_local/CCHF/subroutines_CCHF_specific/modular_engine/CCHF_modules.m', 314)" style="font-weight:bold">CCHF_modules</a> (<a href="matlab: opentoline('/Users/thomas/git_local/CCHF/subroutines_CCHF_specific/modular_engine/CCHF_modules.m',314,0)">line 314</a>)
+The avalnching representation  not recognized.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CCHF_engine_v4', '/Users/thomas/git_local/CCHF/subroutines_CCHF_specific/modular_engine/CCHF_engine_v4.m', 476)" style="font-weight:bold">CCHF_engine_v4</a> (<a href="matlab: opentoline('/Users/thomas/git_local/CCHF/subroutines_CCHF_specific/modular_engine/CCHF_engine_v4.m',476,0)">line 476</a>)
+            coefTemp = cat(1,coef, CCHF_modules(sHydro{mm}, sMeta));
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('CCHF_implement', '/Users/thomas/git_local/CCHF/subroutines_CCHF_specific/modular_engine/CCHF_implement.m', 410)" style="font-weight:bold">CCHF_implement</a> (<a href="matlab: opentoline('/Users/thomas/git_local/CCHF/subroutines_CCHF_specific/modular_engine/CCHF_implement.m',410,0)">line 410</a>)
+    sMeta.coefAtt = CCHF_engine_v4(sPath, sHydro, sMeta);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HPAT_main_v3_Oregon_test_case', '/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/HPAT_main_v3_Oregon_test_case.m', 393)" style="font-weight:bold">HPAT_main_v3_Oregon_test_case</a> (<a href="matlab: opentoline('/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/HPAT_main_v3_Oregon_test_case.m',393,0)">line 393</a>)
+[sMod, sObs, sPath] = CCHF_implement(sMeta, sOpt);
+} 
+HPAT_main_v3_Oregon_test_case
+'/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/terrain/SRTM_CGIAR41_USGS14158790_dem.asc' has been chosen as the DEM.
+'/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/terrain/SRTM_CGIAR41_USGS14158790_fdr.asc' has been chosen as the flow direction grid.
+'/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/climate/NetCDF/delta_his_pchip_pre_USGS14158790' has been chosen as the precipitation time-series data.
+'/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/climate/NetCDF/delta_his_pchip_tmp_USGS14158790' has been chosen as the near-surface air temperature time-series data.
+The output path is '/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/model_runs/default_2000thru2006-heat_TI_Kraaijenbrink-snmass_cc-icmlt_4'.
+
+Data are now being read from '/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/terrain/SRTM_CGIAR41_USGS14158790_dem.asc'.
+Data have finished loading from '/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/terrain/SRTM_CGIAR41_USGS14158790_dem.asc'.
+Data are now being read from '/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/terrain/SRTM_CGIAR41_USGS14158790_fdr.asc'.
+Data have finished loading from '/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/terrain/SRTM_CGIAR41_USGS14158790_fdr.asc'.
+/Users/thomas/git_local/HPAT/test_cases/Oregon_test_case/observation_data/CCHF_formatted_observations-flow.txt has been selected as observation data file 1 of 1 for Oregon_USGS_14158790.

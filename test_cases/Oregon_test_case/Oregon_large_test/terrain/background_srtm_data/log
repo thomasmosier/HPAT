@@ -1,9 +1,0 @@
-20161031 920   1    77     0wb486507 C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_OR = SELECTMASK(C:\Users\wb486507\Box Sync\mosier_shared\Himalayan_glaciers\regional_data_and_maps\elevation\SRTM30_CGIAR41, C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\HPAT_test)
-20161031 927   3    59     0wb486507 C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_fdr_or = FLOWDIRECTION(C:\Users\wb486507\Box Sync\mosier_shared\
-20161031 930   2    79     0wb486507 C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_fac_or = FLOWACCUMULATION(C:\Users\wb486507\Box Sync\mosier_shar
-20161031 931   0     0     0wb486507 C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_or_1 = SELECTMASK(C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_OR, C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\HPAT_test)
-20161031 932   0     0     0wb486507 C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_facor1 = SELECTMASK(C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_fdr_or, C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\HPAT_test)
-20161031 934   0     0     0wb486507 C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_facor1 = SELECTMASK(C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_fac_or, C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\HPAT_test)
-201610311111   0     0     0wb486507 C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_dem_fl = FILLSINK(C:\Users\wb486507\Box Sync\mosier_shared\Orego
-201610311112   0     0     0wb486507 C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_fdr_fl = FLOWDIRECTION(C:\Users\wb486507\Box Sync\mosier_shared\
-201610311113   0     0     0wb486507 C:\Users\wb486507\Box Sync\mosier_shared\Oregon_test_DEM\srtm30_fac_fl = FLOWACCUMULATION(C:\Users\wb486507\Box Sync\mosier_shar
