@@ -142,7 +142,7 @@ writeType = 'ascii';    %'ascii' = individual ascii files (ESRI format)
 %POINTS WHERE OUTPUT DESIRED:
 reportPt = {'avg'};
 output = {...
-    'flow', reportPt; ... %surface flowrate through cell
+    'flow', {'avg'; 'all'}; ... %surface flowrate through cell
     'mrro', reportPt; ... %surface runoff from cell
     'pr', reportPt; ... %precipitation
     'rain', reportPt; ... %rain
@@ -284,6 +284,8 @@ dateEval = nan(1,3);
 
 blPrevRun = 0;
 
+path2Inputs = '';
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -397,115 +399,4 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% HPAT SPECIFIC
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%MAKE PLOTS OF MODEL OUTPUT
-sModPlot = struct;
-if iscell(sMod) && numel(sMod(:)) == 1
-    flds = fieldnames(sMod{1});
-    if numel(flds) > 1 || ~regexpbl(flds{1},'all')
-        sModPlot = rmfield(sMod{1},'all');
-    end
-elseif isstruct(sMod)
-    flds = fieldnames(sMod);
-    if numel(flds) > 1 || ~regexpbl(flds{1},'all')
-        sModPlot = rmfield(sMod,'all');
-    end
-else
-    warning('HPAT_main:unexpectedOutputType','No output plots will be produced because the output are of an unexpected type.')
-end
-
-%Make plot
-if numel(fieldnames(sModPlot)) > 0 
-    dirModPlots = fullfile(sPath.output, 'model_output_plots');
-        mkdir(dirModPlots);
-    pathOutRt = fullfile(dirModPlots,'model');
-    plot_CCHF(sModPlot, {'flow'}, sMeta, [pathOutRt '_flow']);
-end
-
-
-
-
-
-
-%Do hydropower calculations only during validation or simulation modes:
-for kk = 1 : nSites
-    %Load/find flow data written to file during model runs:
-    flow = nan([numel(sMeta.dateRun(:,1)), size(sHydro{kk}.dem)], 'single');
-    if iscell(sMod) && numel(sMod(:)) == 1
-        if isfield(sMod{kk}.all, 'pathflow')
-            dirFlow = sMod{1}.all.pathflow;
-        else
-            dirFlow = '';
-            if isfield(sMod{kk}.all, 'flow')
-                flow = sMod{kk}.all.flow;
-            end
-        end
-    elseif isstruct(sMod)
-        if isfield(sMod{kk}.all, 'pathflow')
-            dirFlow = sMod.all.pathflow;
-        else
-            dirFlow = '';
-            if isfield(sMod.all, 'flow')
-                flow = sMod.all.flow;
-            end
-        end
-    else
-        warning('HPAT_main:unexpectedOutputType','No output plots will be produced because the output are of an unexpected type.');
-    end
-
-    if ~isempty(dirFlow) && all(all2d(flow))
-        filesFlow = find_files(dirFlow,'nc');
-
-        for ii = 1 : numel(sMod{kk}.all.date(:,1))
-            pathCurr = fullfile(dirFlow, filesFlow{ii});
-            flow(ii,:,:) = ncread(pathCurr, 'flow');
-        end
-    end
-
-    flowAvg = nanmean(flow,1);
-
-    %CALCULATE HYDROPOWER POTENTIAL
-    if iscell(sMod) && numel(sMod(:)) == 1
-        [powerAvg, powerRho, powerSd, powerSm] = power_potential(sHydro{kk}.slopeFdr, sHydro{kk}.dlFdr, flow, sMod{1}.all.date);
-    elseif isstruct(sMod)
-        [powerAvg, powerRho, powerSd, powerSm] = power_potential(sHydro{kk}.slopeFdr, sHydro{kk}.dlFdr, flow, sMod.all.date);
-    else
-        warning('HPAT_main:unexpectedOutputType','No output plots will be produced because the output are of an unexpected type.');
-    end
-
-
-    %%%%%%%%%%%%%%%%%%%%%%%%
-    %%%% DEFINE RANKING METRIC AND CALCULATE HERE
-    %%%%%%%%%%%%%%%%%%%%%%%%
-    powerQual = power_quality(powerRho, powerSm);
-    %%%%%%%%%%%%%%%%%%%%%%%%
-    %%%% END OF RANKING METRIC
-    %%%%%%%%%%%%%%%%%%%%%%%%
-
-
-    %Write hydropower statistics to file:
-    dirHydroStats = fullfile(sPath{kk}.output,'hydro_stats');
-        mkdir(dirHydroStats);
-    pathFlowAvg = fullfile(dirHydroStats,'flow_mean');
-    pathPwrAvg = fullfile(dirHydroStats,'power_mean');
-    pathPwrRho = fullfile(dirHydroStats,'power_density');
-    pathPwrSd  = fullfile(dirHydroStats,'power_standard_deviation');
-    pathPwrSm  = fullfile(dirHydroStats,'power_stability_metric');
-    pathPwrQual = fullfile(dirHydroStats,'power_quality');
-
-    if regexpbl(printHydro,{'nc', 'netcdf'})
-        print_grid_NC([pathFlowAvg, '.nc'], flowAvg,      'flow_avg', sHydro{kk}.lon, sHydro{kk}.lat, nan(1,3), 1);
-        print_grid_NC([pathPwrAvg, '.nc'], powerAvg,       'pwr_avg', sHydro{kk}.lon, sHydro{kk}.lat, nan(1,3), 1);
-        print_grid_NC([pathPwrRho, '.nc'], powerRho,   'pwr_density', sHydro{kk}.lon, sHydro{kk}.lat, nan(1,3), 2);
-        print_grid_NC([ pathPwrSd, '.nc'],  powerSd,        'pwr_sd', sHydro{kk}.lon, sHydro{kk}.lat, nan(1,3), 2);
-        print_grid_NC([ pathPwrSm, '.nc'],  powerSm, 'pwr_stability', sHydro{kk}.lon, sHydro{kk}.lat, nan(1,3), 2);
-        print_grid_NC([pathPwrQual, '.nc'], powerQual, 'pwr_quality', sHydro{kk}.lon, sHydro{kk}.lat, nan(1,3), 2);
-    elseif regexpbl(printHydro, 'asc')
-        hdrWrt = ESRI_hdr(sHydro{kk}.lon, sHydro{kk}.lat, 'corner');
-        write_ESRI_v4(  flowAvg, hdrWrt, [pathFlowAvg, '.asc'], 1);
-        write_ESRI_v4( powerAvg, hdrWrt, [ pathPwrAvg, '.asc'], 1);
-        write_ESRI_v4( powerRho, hdrWrt, [ pathPwrRho, '.asc'], 2);
-        write_ESRI_v4(  powerSd, hdrWrt, [  pathPwrSd, '.asc'], 2);
-        write_ESRI_v4(  powerSm, hdrWrt, [  pathPwrSm, '.asc'], 2);
-        write_ESRI_v4(powerQual, hdrWrt, [pathPwrQual, '.asc'], 2);
-    end
-end
+HPAT_implement(sHydro, sPath, sMod, sMeta);
