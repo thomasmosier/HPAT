@@ -46,10 +46,10 @@ runType = 'default';	%Either 'default' (guess a parameter set),
 %Select the name for the region (used for naming output files):
 region = 'Hunza';
 
-startDate = [2000, 2, 16];  %Vector with format '[year, month]' specifying date 
+startDate = [2000, 1, 11];  %Vector with format '[year, month]' specifying date 
                         %to begin model run (run will include this date).
 
-endDate = [2007, 9, 30];   %Vector with format '[year, month]' specifying date 
+endDate = [2005, 12, 31];   %Vector with format '[year, month]' specifying date 
                         %to end model run (run will include this date).                          
 
 
