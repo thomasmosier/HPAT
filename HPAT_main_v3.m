@@ -392,7 +392,7 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%IMPLEMENTATION CCHF (hydrologic) MODEL:    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-[sMod, sObs, sPath] = CCHF_implement(sMeta, sOpt);
+[sMod, sObs, sPath, sHydro] = CCHF_implement(sMeta, sOpt);
 
 
 
